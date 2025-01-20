@@ -1,0 +1,240 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+}
+
+header {
+    width: 100%;
+}
+
+header div {
+    background-color: #347928;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+nav {
+    background-color: #185519;
+    padding: 5px;
+    width: 100%;
+    position: sticky; /*ini kenapa sticky nya tidak bisa :( */
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    padding-inline: 4rem;
+    display: flex;
+    gap: 2rem;
+}
+
+nav li {
+    list-style-type: none;
+}
+
+nav a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #FFE31A;
+    font-weight: bold;
+}
+
+h2 {
+    color: white;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+    gap: 2rem;
+}
+
+main #content {
+    flex: 8;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+article {
+    background-color: #185519;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.container {
+    background-color: #347928;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 1rem;
+}
+
+.card {
+    background-color: #FFE31A;
+    box-shadow: 0px 2px 4px 0 #185519;
+    border-radius: 12px;
+    max-width: 200px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    cursor: default;
+}
+
+.card img {
+    box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.2);
+    max-width: 200px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    object-fit: cover;
+    object-position: center;
+    padding: 4px;
+    flex: 4;
+}
+
+.card p {
+    color: #185519;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    flex: 1;
+}
+
+.card:hover {
+    box-shadow: -4px -4px 8px 0 rgb(217, 255, 0), 4px 4px 8px rgb(217, 255, 0);
+}
+
+main aside {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#location,
+#order {
+    background-color: #185519;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+aside p {
+    text-align: center;
+    color: white;
+}
+
+iframe {
+    border-radius: 10px;
+}
+
+#order div {
+    display: flex;
+    justify-content: center;
+}
+
+#order img {
+    max-width: 200px;
+    width: 150px;
+}
+
+footer {
+    background-color: #185519;
+    padding: 0.5rem;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+footer ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 12px;
+}
+
+footer li {
+    list-style-type: none;
+}
+
+footer li a {
+    color: inherit;
+    text-decoration: none;
+}
+
+footer li a:hover {
+    color: #FFE31A;
+}
+
+#to_top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: white;
+    color: #185519;
+    padding: 4px 12px;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    opacity: 0.8;
+}
+
+#to_top:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 1200px) {
+    main {
+        flex-flow: column wrap;
+    }
+
+    .container {
+        flex-flow: row wrap;
+        gap: 1rem;
+    }
+
+    main aside {
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    #order {
+        height: 80%;
+    }
+
+    #order img {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav ul {
+        justify-content: center;
+        flex-flow: row wrap;
+    }
+
+    main aside {
+        flex-flow: column wrap;
+    }
+
+    #order {
+        width: 50%;
+        align-self: center;
+    }
+}
